@@ -119,6 +119,89 @@ body {
   margin-top: 26px;
 }
 
+.checkout-panel h2 {
+  margin-top: 0;
+}
+
+.checkout-tip {
+  color: color-mix(in srgb, #19212e 72%, #3268b8 28%);
+  line-height: 1.7;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(18px, 3vw, 32px);
+  margin-top: 12px;
+}
+
+.checkout-form,
+.checkout-result {
+  border: 1px solid color-mix(in srgb, #19212e 10%, transparent);
+  border-radius: 8px;
+  padding: 18px;
+  background: color-mix(in srgb, #ffffff 62%, transparent);
+}
+
+.member-brief {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: -6px 0 14px;
+  font-size: 14px;
+  color: color-mix(in srgb, #19212e 78%, #3268b8 22%);
+}
+
+.checkout-error {
+  margin-top: 14px;
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.result-grid > div {
+  border: 1px solid color-mix(in srgb, #19212e 10%, transparent);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.result-grid dt {
+  font-size: 13px;
+  color: color-mix(in srgb, #19212e 58%, #3268b8 42%);
+}
+
+.result-grid dd {
+  margin: 6px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.result-strong {
+  color: #cf5c36;
+}
+
+.result-empty {
+  margin: 0;
+  color: color-mix(in srgb, #19212e 58%, #3268b8 42%);
+  line-height: 1.7;
+}
+
+.checkout-history {
+  margin-top: 24px;
+}
+
 .plain-table {
   overflow: hidden;
   border: 1px solid color-mix(in srgb, #19212e 12%, transparent);
@@ -158,7 +241,9 @@ body {
   }
 
   .lead-grid,
-  .metric-grid {
+  .metric-grid,
+  .checkout-grid,
+  .result-grid {
     grid-template-columns: 1fr;
   }
 

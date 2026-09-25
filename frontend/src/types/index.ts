@@ -30,3 +30,40 @@ export interface OverviewResponse {
   kpis: KpiItem[];
   records: OperationRecord[];
 }
+
+export interface MemberInfo {
+  id: string;
+  name: string;
+  level: string;
+  levelName: string;
+  discount: number;
+  discountLabel: string;
+  totalSpend: number;
+  points: number;
+}
+
+export interface SettlementPayload {
+  memberId: string;
+  amount: number;
+  pointsToUse: number;
+}
+
+export interface SettlementResult {
+  id: string;
+  memberId: string;
+  memberName: string;
+  originalLevel: string;
+  newLevel: string;
+  levelUpgraded: boolean;
+  discount: number;
+  discountLabel: string;
+  originalAmount: number;
+  discountedAmount: number;
+  pointsUsed: number;
+  pointsDeduction: number;
+  actualReceived: number;
+  pointsEarned: number;
+  remainingPoints: number;
+  totalSpend: number;
+  settledAt: string;
+}

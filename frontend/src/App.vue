@@ -7,6 +7,7 @@ import { createFallbackOverview } from "./state/dashboard";
 import type { OverviewResponse } from "./types";
 import FeatureStrip from "./components/FeatureStrip.vue";
 import MetricGrid from "./components/MetricGrid.vue";
+import CheckoutPanel from "./components/CheckoutPanel.vue";
 import OperationsTable from "./components/OperationsTable.vue";
 
 const overview = ref<OverviewResponse>(createFallbackOverview());
@@ -44,6 +45,7 @@ onMounted(async () => {
         </article>
         <MetricGrid :items="overview.kpis" />
       </div>
+      <CheckoutPanel />
       <FeatureStrip :items="overview.features" />
       <section class="work-panel">
         <h2>运营任务流</h2>
