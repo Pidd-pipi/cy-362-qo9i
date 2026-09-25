@@ -30,3 +30,39 @@ export interface OverviewResponse {
   kpis: KpiItem[];
   records: OperationRecord[];
 }
+
+export type LevelCode = "BRONZE" | "SILVER" | "GOLD" | "DIAMOND";
+
+export interface LevelRule {
+  code: LevelCode;
+  name: string;
+  threshold: number;
+  rate: number;
+  discountLabel: string;
+}
+
+export interface Member {
+  memberNo: string;
+  name: string;
+  totalSpent: number;
+  points: number;
+}
+
+export interface SettlementResult {
+  id: string;
+  settledAt: string;
+  memberNo: string;
+  memberName: string;
+  amount: number;
+  oldLevel: LevelCode;
+  newLevel: LevelCode;
+  discountLabel: string;
+  rate: number;
+  payableAfterDiscount: number;
+  redeemedPoints: number;
+  deductedAmount: number;
+  actualPaid: number;
+  earnedPoints: number;
+  remainingPoints: number;
+  upgraded: boolean;
+}
